@@ -1,0 +1,489 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: var(--main-background);
+}
+
+:root{
+    --main-background: #1c202e;
+    --ball-color: #e3592b;
+}
+
+.light-ball{
+    width: 400px;
+    height: 400px;
+    background-image: radial-gradient(circle, rgba(227, 89, 43, 0.6) 0%, rgba(227, 89, 43, 0) 60%);
+    border-radius: 50%;
+    opacity: 50%;
+    z-index: 1;
+}
+
+.light-ball:nth-child(1) {
+    position: absolute;
+    right: 90px;
+    top: -200px;
+}
+
+.light-ball:nth-child(2){
+    position: absolute;
+    left: -200px;
+    top: 100px;
+}
+
+.nav-bar{
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 2;
+}
+
+.nav-bar .nav{
+    list-style: none;
+}
+
+.nav-bar .nav li{
+    display: inline-flex;
+    width: auto;
+    padding: 6px;
+    margin-left: 20px;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+    transition: 0.2s ease-out;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.certifica a{
+    background-color: var(--ball-color);
+    padding: 10px;
+    text-align: center;
+    color: var(--main-background);
+    transition: 0.1s ease;
+}
+
+.certifica a:hover{
+    color: white;
+    background-color: transparent;
+    border: 1px solid var(--ball-color);
+}
+
+.nav-bar .nav li:hover{
+    background-color: var(--ball-color);
+    color: wheat;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 80px;
+    height: 80px;
+    clip-path: circle(50% at 50% 74%)
+}
+
+hr{
+    width: 80%;
+    border: 1px solid var(--ball-color);
+}
+
+.info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.info-self{
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    padding: 10px;
+    gap: 20px;
+    color: white;
+}
+
+.info button{
+    width: fit-content;
+    background-color: var(--ball-color);
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    transition: 0.5s ease-in;
+    cursor: pointer;
+}
+
+.info button:hover{
+    background-color: cornflowerblue;
+}
+
+.picture{
+    display: grid;
+    grid-template-rows: 30px 1fr 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.picture div{
+    grid-row: 2 / -3;
+    width: 300px;
+    height: 400px;
+    border: 2px solid var(--ball-color);
+    box-shadow: 9px 9px 0 0 var(--ball-color);
+
+}
+
+.picture div img{
+    width: 100%;
+    height: 100%;
+    object-fit :fill;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about{
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 30px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.icon {
+    text-decoration: none;
+    color: var(--ball-color);
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.icon:hover {
+    box-shadow: 0 0 15px 5px var(--ball-color);
+    color: antiquewhite;
+    background-color: #e3592b;
+    transform: scale(1.1);
+}
+
+.container{
+    position: relative;
+    display: block;
+    padding: 10px;
+    gap: 20px;
+    z-index: 5;
+}
+
+.profile-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #2c3247;
+    border: 1px solid var(--ball-color);
+    padding: 10px;
+}
+
+.profile-img>div{
+    width: 100px;
+    height: 100px;
+}
+
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    box-shadow: 0 0 5px 1px black;
+}
+
+.contact-info{
+    color: white;
+}
+.contact-info input{
+    width: 150px;
+    background-color: var(--main-background);
+    outline: none;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    opacity: 0;
+    padding: 20px;
+    animation: scal 1s ease-out forwards;
+}
+
+@keyframes scal {
+    from {
+        opacity: 0;
+        transform: scale(1.02);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.main-project{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px;
+    gap: 40px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: all 0.4s ease;
+}
+
+.content img{
+    border: 1px solid var(--ball-color);
+    border-radius: 5%;
+    transition: all 0.2s ease;
+}
+
+.content:hover{
+    transform: scale(1.03);
+}
+
+.content:hover p{
+    visibility: visible;
+}
+
+.content p{
+    padding: 2px;
+    background-color: var(--ball-color);
+    border-radius: 5%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    visibility: hidden;
+    transition: all 0.1s ease;
+}
+
+h3{
+    color: var(--ball-color);
+    
+}
+
+.content p:hover{
+    color: white;
+    background-color: transparent;
+    border: 1px solid var(--ball-color);
+    transform: scale(1.04);
+}
+
+.content h2{
+    color: whitesmoke;
+    font-size: small;
+    text-wrap: wrap;
+}
+
+.content div{
+    width: 250px;
+    height: 150px;
+}
+
+.content img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.contact{
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+}
+
+.contact div{
+    width: 300px;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: var(--ball-color);
+}
+
+.contact form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact form input{
+    border: none;
+    outline: none;
+    padding: 8px;
+    background-color: var(--main-background);
+}
+
+.contact form button{
+    background-color: var(--main-background);
+    color: white;
+    border: none;
+    padding: 8px;
+    width: 30%;
+    cursor: pointer;
+}
+
+textarea{
+    resize: none;
+    outline: none;
+    border: none;
+    background-color: var(--main-background);
+    height: 110px;
+}
+
+.contact form button:hover{
+    color: var(--ball-color);
+}
+
+.menu {
+    display: none;
+}
+
+.menu span{
+    cursor: pointer;
+}
+
+.menu span:hover{
+    color: var(--ball-color);
+}
+
+
+#ul-menu{
+    position: absolute;
+    width: 50%;
+    height: 300px;
+    left: 160px;
+    top: 60px;
+    overflow: hidden;
+    margin: 5px;
+    border: 1px solid var(--main-background);
+    background-color: var(--ball-color);
+    z-index: 10;
+}
+
+#ul-menu ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding: 10px;
+}
+
+#ul-menu ul li{
+    padding: 10px;
+}
+
+#ul-menu ul li:hover{
+    background-color: var(--main-background);
+}
+
+@media screen and (max-width: 1115px){
+    .main-project{
+        grid-template-columns: repeat(3, 1fr);
+        margin: 10px;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 820px){
+    .main-project{
+        grid-template-columns: repeat(3, 1fr);
+        margin: 10px;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .main-project{
+        grid-template-columns: repeat(2, 1fr);
+        margin: 10px;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .info{
+        display: flex;
+        flex-direction: column;
+        gap: auto;
+        padding: 20px;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .portfolio {
+        font-size: small;
+        padding: 10px;
+    }
+
+    .main-project{
+        grid-template-columns: repeat(1, 1fr);
+        margin: 10px;
+        gap: 20px;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    #ul-menu{
+        height: 300px;
+        left: auto;
+        top: 60px;
+    }
+
+    .portfolio {
+        font-size: 8px;
+    }
+    
+}
