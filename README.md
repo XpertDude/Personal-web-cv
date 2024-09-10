@@ -14,7 +14,7 @@ JavaScript: Enhancing interactivity.
 Responsive Design: Media queries for adaptability across various devices.
 How to Run the Project
 Clone the repository:
-git clone https://github.com/yourusername/personal-cv.git
+git clone https://github.com/XpertDude/Personal-web-cv.git
 Navigate to the project folder:
 cd personal-cv
 Open the index.html file in your preferred web browser:
