@@ -3,16 +3,25 @@ const menuDialog = document.getElementById('ul-menu');
 const list = document.querySelector('.hidden');
 console.log(menuDialog);
 
+const effectDialog = (eff) => {
+    eff.style.opacity = '1';
+    eff.style.transform = 'scaleX(1)';
+    document.body.style.filter = 'blur(4px)';
+}
+const resetDialog = (eff) => {
+    eff.style.opacity = '0';
+    eff.style.transform = 'scaleX(0)'; 
+    document.body.style.filter = 'none';
+};
 menuBtn.addEventListener('click', (event) => {
-    console.log('clicked');
     menuDialog.showModal();
-    document.body.style.filter = 'blur(5px)';
+    effectDialog(menuDialog)
     event.stopPropagation();
 });
 
 document.body.addEventListener('click', (event) => {
     menuDialog.close();
-    document.body.style.filter = 'none'; 
+    resetDialog(menuDialog)
     event.stopPropagation()
 });
 
