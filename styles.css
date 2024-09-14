@@ -179,6 +179,10 @@ hr{
     z-index: 10;
 }
 
+.contact{
+    z-index: 10;
+}
+
 .contact-icons{
     display: flex;
     justify-content: center;
@@ -385,6 +389,7 @@ textarea{
     border: none;
     background-color: var(--main-background);
     height: 110px;
+    padding: 5px;
 }
 
 .contact form button:hover{
@@ -436,6 +441,14 @@ textarea{
 #ul-menu ul li:hover{
     background-color: var(--main-background);
     transform: scale(1.08);
+}
+
+#contact-form{
+    z-index: 10;
+}
+
+#contact-form input, textarea{
+    color: white;
 }
 
 #notification{
