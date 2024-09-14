@@ -172,10 +172,20 @@ hr{
     padding: 30px;
 }
 
-.social-icons {
+.social-icons{
     display: flex;
     gap: 20px;
+    margin: 20px;
+    z-index: 10;
 }
+
+.contact-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
 
 .icon {
     text-decoration: none;
@@ -336,6 +346,7 @@ h3{
     display: flex;
     justify-content: center;    
     align-items: center;
+    margin: 50px;
 }
 
 .contact div{
@@ -425,6 +436,42 @@ textarea{
 #ul-menu ul li:hover{
     background-color: var(--main-background);
     transform: scale(1.08);
+}
+
+#notification{
+    background-color: white;
+    color: var(--main-background);
+    padding: 10px;
+    border: none;
+    width: 20%;
+    height: 25%;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+
+#ok-btn{
+    width: 20%;
+    height: 20%;
+    background-color: var(--ball-color);
+    color: var(--main-background);
+    text-align: center;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.not-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.bi-send{
+    color: var(--ball-color);
 }
 
 @media screen and (max-width: 1115px){
