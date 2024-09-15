@@ -309,10 +309,8 @@ hr{
 
 .content p{
     padding: 2px;
-    background-color: var(--ball-color);
     border-radius: 5%;
     cursor: pointer;
-    transition: all 0.4s ease;
     visibility: hidden;
     transition: all 0.1s ease;
 }
@@ -324,9 +322,7 @@ h3{
 
 .content p:hover{
     color: white;
-    background-color: transparent;
-    border: 1px solid var(--ball-color);
-    transform: scale(1.04);
+    background-color: var(--ball-color);
 }
 
 .content h2{
